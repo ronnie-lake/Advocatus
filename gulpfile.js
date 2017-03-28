@@ -30,7 +30,7 @@ gulp.task('watch', function(){
 	    './js/*.js',
 	    './css/*.css'
 	  ]).on('change', browserSync.reload);
-	watch('./less/*.less', function() {
+	watch('./less/**/*.less', function() {
     	gulp.start('less');
   	});
 });

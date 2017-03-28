@@ -1,0 +1,154 @@
+@white: #fff;
+@gold: #dcb558;
+@black: #000;
+@gray: #666;
+@category: #111;
+@font-open: 'Open Sans', sans-serif;
+@font-play: 'Playfair Display', serif;
+
+.recent {
+  background-color: @white;
+  padding: 99px 0 106px;
+
+  &__main-descript {
+    position: relative;
+    width: 770px;
+    padding-left: 20px;
+    margin-bottom: 68px;
+    border-left: 2px solid @gold;
+  }
+
+  &__caption {
+    display: block;
+    margin-bottom: 23px;
+    font-family: @font-play;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 23px;
+    letter-spacing: 1.2px;
+    color: @black;
+  }
+
+  &__descript {
+    font-family: @font-play;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: .81px;
+    color: @gray;
+  }
+
+  &__number {
+    position: absolute;
+    top: -50px;
+    left: -2px;
+    font-family: @font-open;
+    font-weight: 400;
+    font-size: 195px;
+    line-height: 1;
+    letter-spacing: 8px;
+    color: @category;
+    opacity : .05;
+    z-index: 0;
+  }
+}
+
+.articles {
+  font-size: 0;
+  list-style: none;
+
+  &__item {
+    .ib-top;
+    width: 370px;
+    padding-bottom: 21px;
+    overflow: hidden;
+    border-bottom: 3px solid @gold;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__container {
+    height: 298px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+
+  &__img {
+
+  }
+
+  &__caption {
+    display: block;
+    font-family: @font-play;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: .81px;
+    color: @black;
+  }
+
+  &__info {
+    margin-bottom: 26px;
+  }
+
+  &__author {
+    float: left;
+    font-family: @font-open;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .7px;
+    color: @gray;
+
+    &_regular {
+      float: none;
+      font-style: normal;
+      color: @black;
+    }
+  }
+
+  &__date {
+    float: right;
+    font-family: @font-open;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .5px;
+    color: @gray;
+  }
+
+  &__descript {
+    display: block;
+    margin-bottom: 22px;
+    font-family: @font-open;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 31px;
+    letter-spacing: .6px;
+    color: @gray;
+  }
+
+  &__comments {
+    float: left;
+    font-family: @font-open;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 31px;
+    letter-spacing: .9px;
+    color: @black;
+  }
+
+  &__share {
+    float: right;
+    font-family: @font-open;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 31px;
+    letter-spacing: .9px;
+    color: @black;
+  }
+}

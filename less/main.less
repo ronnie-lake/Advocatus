@@ -1,0 +1,27 @@
+@import 'blocks/recent.less';
+
+h1, h2, h3, h4, h5, h6, ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.clearfix {
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.ib-top() {
+  display: inline-block;
+  vertical-align: top;
+}
