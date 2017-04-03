@@ -1,6 +1,18 @@
 
 .header {
   height: 110px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+  transition: .2s;
+
+  &.active {
+    margin-top: -25px;
+    height: 85px;
+  }
 
   &__logo {
         margin-top: 48px;
@@ -38,6 +50,10 @@
     }
 }
 
+.main {
+    margin-top: 110px;
+}
+
 .hero {
 
      &__container {
@@ -58,14 +74,14 @@
         vertical-align: top;
    
     &:before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 14px;
-    bottom: 7px;
-    left: -7px;
-    width: 2px;
-    background-color: @gold;
+        content: '';
+        position: absolute;
+        display: block;
+        top: 14px;
+        bottom: 7px;
+        left: -7px;
+        width: 2px;
+        background-color: @gold;
     }
 }
 
@@ -782,11 +798,11 @@
      &__caption {
         display: block;
         margin-bottom: 17px;
-        font-family: @white;
+        font-family: @font-open;
         font-weight: 400;
         font-size: 31px;
         letter-spacing: 2.19px;
-        color: @black;
+        color: @white;
     }
 
      &__descript {
@@ -813,7 +829,7 @@
     }
 
     &__question {
-        display: inline-block;
+        display: block;
     }
 
     &__descript {
@@ -827,7 +843,10 @@
     &__item {
         border-bottom: 1px solid @gold;
         padding: 15px 0 16px 0;
-        width: 566px;
+
+        &.active {
+             width: 566px;
+        }
 
         &.active .question__token {
 
@@ -865,6 +884,7 @@
     }
 }
 .descript {
+    list-style: none;
     vertical-align: top;
     margin: 20px 0 0 31px;
 

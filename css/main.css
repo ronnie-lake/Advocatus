@@ -1,5 +1,16 @@
 .header {
   height: 110px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+  transition: .2s;
+}
+.header.active {
+  margin-top: -25px;
+  height: 85px;
 }
 .header__logo {
   margin-top: 48px;
@@ -27,6 +38,9 @@
   color: #111;
   text-decoration: none;
   font-weight: 600;
+}
+.main {
+  margin-top: 110px;
 }
 .hero__container {
   width: 100%;
@@ -648,11 +662,11 @@
 .quest__caption {
   display: block;
   margin-bottom: 17px;
-  font-family: #fff;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 31px;
   letter-spacing: 2.19px;
-  color: #000;
+  color: #fff;
 }
 .quest__descript {
   font-family: 'Playfair Display', serif;
@@ -676,7 +690,7 @@
   z-index: 0;
 }
 .quest__question {
-  display: inline-block;
+  display: block;
 }
 .quest__descript {
   display: inline-block;
@@ -687,6 +701,8 @@
 .question__item {
   border-bottom: 1px solid #dcb558;
   padding: 15px 0 16px 0;
+}
+.question__item.active {
   width: 566px;
 }
 .question__item.active .question__token:before {
@@ -716,6 +732,7 @@
   font-weight: 800;
 }
 .descript {
+  list-style: none;
   vertical-align: top;
   margin: 20px 0 0 31px;
 }
