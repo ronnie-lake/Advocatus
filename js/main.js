@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	if($(this).scrollTop() > 60) {
+		$('.header').addClass('active');
+	} else {
+		$('header').removeClass('active');
+	}
+	
 	$(window).scroll(function(){
 		if($(this).scrollTop() > 60) {
 			$('.header').addClass('active');
