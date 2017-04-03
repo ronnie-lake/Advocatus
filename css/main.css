@@ -643,6 +643,9 @@
   background-color: #111;
   padding: 94px 0 169px 0;
 }
+.quest__main {
+  font-size: 0;
+}
 .quest__main-descript {
   position: relative;
   width: 770px;
@@ -668,7 +671,7 @@
   letter-spacing: 2.19px;
   color: #fff;
 }
-.quest__descript {
+.quest__info {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 21px;
@@ -707,8 +710,10 @@
 }
 .question__item.active .question__token:before {
   content: '- ';
+  padding-right: 4px;
   color: #fff;
   font-size: 22px;
+  line-height: 22px;
   font-weight: 800;
 }
 .question__item.active .question__formulation {
@@ -724,6 +729,9 @@
 .question__token {
   display: inline-block;
   float: right;
+  cursor: pointer;
+  width: 18px;
+  text-align: right;
 }
 .question__token:before {
   content: '+ ';
@@ -734,13 +742,13 @@
 .descript {
   list-style: none;
   vertical-align: top;
-  margin: 20px 0 0 31px;
 }
 .descript__item {
   display: none;
   width: 410px;
   background-color: #dcb558;
   border-radius: 2px;
+  margin: 20px 0 0 31px;
   padding: 34px 44px 67px 46px;
   box-shadow: 0 15px 74px -15px #dcb558;
 }
@@ -751,6 +759,7 @@
   width: 410px;
   color: #000;
   font-size: 14px;
+  line-height: 30px;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.6px;
 }
@@ -825,6 +834,7 @@
   width: 100%;
   font-size: 14px;
   margin-bottom: 18px;
+  outline: none;
 }
 .contact__button {
   display: block;
@@ -838,6 +848,8 @@
   font-weight: 800;
   border: 0;
   margin-top: 92px;
+  outline: none;
+  cursor: pointer;
 }
 .contact__map-yell {
   background-color: #dcb558;

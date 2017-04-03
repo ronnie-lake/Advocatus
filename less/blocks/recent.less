@@ -777,7 +777,11 @@
     background-color: @category;
     padding: 94px 0 169px 0;
 
-     &__main-descript {
+    &__main {
+        font-size: 0;
+    }
+
+    &__main-descript {
         position: relative;
         width: 770px;
         padding-left: 22px;
@@ -805,7 +809,7 @@
         color: @white;
     }
 
-     &__descript {
+     &__info {
         font-family: @font-play;
         font-weight: 400;
         font-size: 21px;
@@ -851,10 +855,12 @@
         &.active .question__token {
 
             &:before {
-            content: '- ';
-            color: @white;
-            font-size: 22px;
-            font-weight: 800;
+                content: '- ';
+                padding-right: 4px;
+                color: @white;
+                font-size: 22px;
+                line-height: 22px;
+                font-weight: 800;
             }
         }
         &.active .question__formulation {
@@ -873,6 +879,9 @@
     &__token {
         display: inline-block;
         float: right;
+        cursor: pointer;
+        width: 18px;
+        text-align: right;
 
         &:before {
             content: '+ ';
@@ -886,13 +895,13 @@
 .descript {
     list-style: none;
     vertical-align: top;
-    margin: 20px 0 0 31px;
 
     &__item {
         display: none;
         width: 410px;
         background-color: @gold;
         border-radius: 2px;
+        margin: 20px 0 0 31px;
         padding: 34px 44px 67px 46px;
         box-shadow: 0 15px 74px -15px @gold;
 
@@ -905,6 +914,7 @@
         width: 410px;
         color: @black;
         font-size: 14px;
+        line-height: 30px;
         font-family: @font-open;
         letter-spacing: .6px
     }
@@ -988,6 +998,7 @@
         width: 100%;
         font-size: 14px;
         margin-bottom: 18px;
+        outline: none;
     }
 
     &__button {
@@ -1002,6 +1013,8 @@
         font-weight: 800;
         border: 0;
         margin-top: 92px;
+        outline: none;
+        cursor: pointer;
     }
 
     &__map-yell {
