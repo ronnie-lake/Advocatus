@@ -48,7 +48,7 @@ $(document).ready(function(){
 			$('.question__item.active').removeClass('active');
 			$(this).parent().addClass('active');
 			$('.descript__item.active').hide().removeClass('active');
-			$('.descript__item:nth-child(' +questNumber+ ')').fadeIn('fast').addClass('active');
+			$('.descript__item:nth-child(' +questNumber+ ')').fadeIn(600).addClass('active');
 		}
 	})
 })

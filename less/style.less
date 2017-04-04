@@ -17,19 +17,18 @@
   &__logo {
         margin-top: 48px;
         display: inline-block;
-  }
+    }
 
   &__menu {
         margin-top: 45px;
         vertical-align: top;
         display: inline-block;
         float: right;
-  }
+    }
 }
 
 .menu {
         list-style: none;
-
 
     &__item {
         display: inline-block;
@@ -46,7 +45,28 @@
         color: @category;
         text-decoration: none;
         font-weight: 600;
-    
+        position: relative;
+        transition: all 0.2s ease-in-out;
+
+        &:after {
+            background-color: transparent;
+            content: '';
+            position: absolute;
+            height: 5px;
+            bottom: -16px;
+            left: -3px;
+            right: -3px;
+            transition: all 0.15s ease-in-out;
+        }
+        
+        &:hover:after {
+            background-color: @gold;
+
+        }
+
+        &:hover {
+            color: @gold;
+        }
     }
 }
 
@@ -61,10 +81,17 @@
         height: 840px;
         overflow: hidden;
         position: relative;
-    }
 
-     &__hero {
-
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient( to bottom, transparent 28%, @black 110%);
+        }
     }
 
     &__descript-container {
@@ -123,6 +150,11 @@
         border-radius: 35px;
         font-weight: 800;
         letter-spacing: .6px;
+        transition: background 0.2s ease-in-out;
+
+        &:hover {
+            background-color: darken(@gold, 30%);     
+        }
     }
 }
 .about {
@@ -320,7 +352,6 @@
         &:last-child, &:nth-last-child(2) {
             margin-bottom: 0;
         }
-           
 
              &_private {
                 background: url(../img/private.png) no-repeat 1px 1px;                
@@ -337,7 +368,6 @@
              &_estate {
                 background: url(../img/estate.png) no-repeat 1px 1px;
              }
-        
     }
 
     &__caption {
@@ -356,7 +386,6 @@
          line-height: 34px;
          line-height: 25px; 
          letter-spacing: .6px;
-
     }
 }
 
@@ -421,24 +450,36 @@
 
     &__item {
         display: inline-block;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
 
         &:not(:last-child) {
             margin-right: 30px;
+
         }
-    }
-
-    &__link {
-
     }
 
     &__container {
         width: 270px;
         height: 300px;
         overflow: hidden;
-    }
+        position: relative;
 
-    &_img {
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            transition: background 0.2s ease-in-out;
+        }
 
+        &:hover:before {
+            background: rgba(0, 0, 0, 0.3);
+        }
     }
 
     &__name {
@@ -521,6 +562,7 @@
 .viewport {
     list-style: none;
     text-align: left;
+    cursor: pointer;
 
     &__item {
         display: none;
@@ -545,10 +587,6 @@
         position: absolute;
         right: 20px;
         bottom: 20px;
-    }
-
-    &__img {
-
     }
 
     &__main {
@@ -597,6 +635,7 @@
         border-radius: 50%;
         display: inline-block;
         margin: 2px 0;
+        cursor: pointer;
 
         &.active {
             border: 1px solid @white;
@@ -613,7 +652,6 @@
                 margin-right: 5px;
             }
         }
-
     }
 }
 
@@ -689,14 +727,32 @@
         }
     }
 
+    &__link {
+        position: relative;
+        display: block;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.3s ease-in-out;
+        }
+
+        &:hover:after {
+            background: rgba(0, 0, 0, 0.2);
+            // background: linear-gradient( to bottom, transparent 28%, @black 110%);
+        }
+    }
+
     &__container {
         height: 298px;
         margin-bottom: 24px;
         overflow: hidden;
-    }
-
-    &__img {
-
     }
 
     &__caption {
@@ -760,6 +816,7 @@
         line-height: 31px;
         letter-spacing: .9px;
         color: @black;
+        cursor: pointer;
     }
 
     &__share {
@@ -770,8 +827,9 @@
         line-height: 31px;
         letter-spacing: .9px;
         color: @black;
-        }
+        cursor: pointer;
     }
+}
 
 .quest  {
     background-color: @category;
@@ -892,6 +950,7 @@
         }
     }
 }
+
 .descript {
     list-style: none;
     vertical-align: top;
@@ -1015,6 +1074,10 @@
         margin-top: 92px;
         outline: none;
         cursor: pointer;
+
+        &:hover {
+            background-color: darken(@gold, 20%);     
+        }
     }
 
     &__map-yell {
@@ -1065,7 +1128,7 @@
 
          &:not(:last-child) {
             margin-right: 19px;
-         }
+        }
     }
 }
 
