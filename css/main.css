@@ -60,11 +60,20 @@
 .main {
   margin-top: 110px;
 }
+.hero {
+  height: 840px;
+  padding-top: 594px;
+  position: relative;
+  box-sizing: border-box;
+}
 .hero__container {
   width: 100%;
   height: 840px;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 .hero__container:before {
   content: '';
@@ -75,12 +84,19 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, transparent 28%, #000 110%);
+  z-index: 1;
+}
+.hero__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .hero__descript-container {
   position: relative;
   padding-left: 12px;
   display: inline-block;
   vertical-align: top;
+  margin-left: 110px;
 }
 .hero__descript-container:before {
   content: '';
@@ -91,11 +107,6 @@
   left: -7px;
   width: 2px;
   background-color: #dcb558;
-}
-.hero__descript {
-  position: absolute;
-  bottom: 141px;
-  left: 475px;
 }
 .hero__name {
   font-family: 'Playfair Display', serif;
@@ -976,6 +987,9 @@ ul,
 p {
   margin: 0;
   padding: 0;
+}
+body {
+  min-width: 1170px;
 }
 .container {
   width: 1170px;
